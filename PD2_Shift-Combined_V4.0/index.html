@@ -178,7 +178,7 @@
     <div class="glass rounded-2xl p-2 ring-1 ring-white/10">
       <div class="frame-wrap rounded-xl overflow-hidden bg-white/90 shadow-lg ring-1 ring-black/5">
         <!-- Note: This file is placed as a sibling folder of A/B. Adjust relative paths if moved. -->
-        <iframe id="shiftFrame" title="Shift Frame" src="../PD2_Shift-A_V4.0/index.html" class="w-full h-full border-0" loading="eager"></iframe>
+  <iframe id="shiftFrame" title="Shift Frame" src="/PD2_Shift-A_V4.0/index.html" class="w-full h-full border-0" loading="eager"></iframe>
       </div>
     </div>
   </section>
@@ -226,7 +226,7 @@
 
   btnA.addEventListener('click', () => {
         if (!btnA.classList.contains('active')) {
-          frame.src = '../PD2_Shift-A_V4.0/index.html';
+          frame.src = '/PD2_Shift-A_V4.0/index.html';
           setActive(btnA, btnB);
         }
         document.getElementById('workbench')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -235,7 +235,7 @@
 
       btnB.addEventListener('click', () => {
         if (!btnB.classList.contains('active')) {
-          frame.src = '../PD2_Shift-B_V4.0/index.html';
+          frame.src = '/PD2_Shift-B_V4.0/index.html';
           setActive(btnB, btnA);
         }
         document.getElementById('workbench')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -248,7 +248,7 @@
       // Deep-link support: .../index.html#shift=B -> open B initially
       const hash = (location.hash || '').toLowerCase();
       if (hash.includes('shift=b')) {
-        frame.src = '../PD2_Shift-B_V4.0/index.html';
+  frame.src = '/PD2_Shift-B_V4.0/index.html';
         setActive(btnB, btnA);
   showToast('เปิดเริ่มต้นที่กะ B');
       }
